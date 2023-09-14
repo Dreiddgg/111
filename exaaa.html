@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>EXAM</title>
+</head>
+<style type="text/css">
+
+	body{
+		padding: 0;
+		margin: 0;
+	}
+
+	.cons{
+		display:inline-flex;
+		text-align: center;
+		justify-content: center;
+		background-color: #5499C7;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		width: 100%;
+	}
+
+	.vid{
+		display:inline-flex;
+		text-align: center;
+		justify-content: center;
+		background-color: #154360;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		width: 100%;
+	}
+
+	button{
+		margin-left: 60px;
+		padding: 10px;
+		border-radius: 10px;
+		background-color: skyblue;
+	}
+
+	iframe{
+		margin-left: 40px;
+		border-radius: 10px;
+		border-radius: 10px;
+	}
+
+	img{
+		width: 350px;
+		height: 350px;
+		margin-left: 40px;
+		border-radius: 10px;
+	}
+
+	ul{
+		text-align: center;
+	}
+
+	li{
+		font-size: 50px;
+		display: inline;
+		margin-left: 20px;
+	}
+
+	a{
+		text-decoration: none;
+		color: black;
+	}
+
+	video{
+		width: 350px;
+		height: 350px;
+	}
+</style>
+<script type="text/javascript">
+	
+function b1(){
+	document.getElementById('p1').src='https://scx2.b-cdn.net/gfx/news/2023/millions-of-dead-fish.jpg';
+}
+function b2(){
+	document.getElementById('p2').src='https://www.reef2reef.com/attachments/img_4622-jpg.1829700/';
+}
+function b3(){
+	document.getElementById('p3').src='https://static.reuters.com/resources/r/?m=02&d=20110218&t=2&i=340608636&r=2011-02-18T201443Z_01_BTRE71H1K8O00_RTROPTP_0_LIONFISH-CARRIBBEAN-INVASION&w=800';
+}
+
+function vid1(){
+	document.getElementById('vd1').src = "https://www.youtube.com/embed/w6lIKiQ8ukk"
+}
+function vid2(){
+	document.getElementById('vd2').src = "https://www.youtube.com/embed/3G5NqPVli_U"
+}
+function vid3(){
+	document.getElementById('vd3').src = "https://www.youtube.com/embed/C4VMyVQZfOA"
+}
+</script>
+<body>
+
+	<div class="nav">
+		<ul>
+			<li>Home</li>
+			<li>Links</li>
+			<li><a href="event.html">Events</a></li>
+		</ul>
+	</div>
+
+	<div class="cons">
+		<div class="img1">
+		<img id="p1" src="https://free4kwallpapers.com/uploads/originals/2015/10/22/found-this-on-a-random-google-search-and-looking-for-something-similar.jpg">
+		<button onclick="b1()">CLICK ME</button>
+		</div>
+		<div class="img2">
+		<img id="p2" src="https://cdn.wallpapersafari.com/82/1/R6P29z.jpg">
+		<button onclick="b2()">CLICK ME</button>
+		</div>
+		<div class="img3">
+		<img id="p3" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9o_0ixSkw10lAa_LP39Hk_PowpCy0T_Z58Q&usqp=CAU">
+		<button onclick="b3()">CLICK ME</button>
+		</div>
+	</div>
+
+		<div class="vid">
+
+		<div class="v1">
+		<iframe id="vd1" width="350" height="350" src="https://www.youtube.com/embed/AVfaWmbsBGQ" title="5 Minute Timer with Relaxing Music 2021 -  Aquarium" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+		<button onclick="vid1()">CLICK ME</button>
+		</div>
+
+		<div class="v1">
+		<iframe id="vd2" width="350" height="350" src="https://www.youtube.com/embed/36zXiJSkMdk" title="Incredible Seahorse Aquarium in REAL 8K HDR - Soothing &amp; Relaxing Music - 8K 4K UHD" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+		<button onclick="vid2()">CLICK ME</button>
+		</div>
+
+		<div class="v1">
+		<iframe id="vd3" width="350" height="350" src="https://www.youtube.com/embed/VZTn7p1sZY4" title="School Of Fish - Sharks swim in a circle - Free Copyright Videos &amp; Music" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+		<button onclick="vid3()">CLICK ME</button>
+		</div>
+
+		</div>
+	
+</body>
+</html>
