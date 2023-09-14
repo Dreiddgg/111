@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Events Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #007BFF;
+            color: #FFFFFF;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            background-color: #0056b3;
+            padding: 20px;
+            margin: 0;
+        }
+        button {
+            padding: 10px;
+            margin: 10px;
+            background-color: #0056b3;
+            color: #FFFFFF;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #00429c;
+        }
+        p, input, select, form {
+            background-color: #FFFFFF;
+            color: #333333;
+            padding: 10px;
+            margin: 10px;
+            border: 1px solid #0056b3;
+        }
+        input[type="text"], input[type="password"] {
+            width: 100%;
+        }
+        select {
+            width: 100%;
+        }
+        img {
+            margin: 10px;
+            border: 1px solid #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>JavaScript Events Example</h1>
+
+    <button id="clickBtn">Click Me!</button>
+
+    <p id="mouseoverPara">Hover over me!</p>
+
+    <p id="mouseoutPara">Mouse out of me!</p>
+
+    <input type="text" id="keydownInput" placeholder="Press a key">
+
+    <p id="keyupPara"></p>
+
+    <select id="changeSelect">
+        <option value="option1">Option 1</option>
+        <option value="option2">Option 2</option>
+    </select>
+
+    <form id="submitForm">
+        <input type="text" name="username" placeholder="Username">
+        <input type="password" name="password" placeholder="Password">
+        <button type="submit">Submit</button>
+    </form>
+
+    <input type="text" id="focusInput" placeholder="Click here to focus">
+
+    <input type="text" id="blurInput" placeholder="Click and then click outside to blur">
+
+    <img id="loadImage" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhki4jfhv4RTSZOOL2Sowcpjvi8ioIkULWpQ&usqp=CAU" alt="Image" width="200">
+
+    <script>
+        document.getElementById('clickBtn').addEventListener('click', function() {
+            alert('Button Clicked!');
+        });
+
+        document.getElementById('mouseoverPara').addEventListener('mouseover', function() {
+            alert('Mouse Over');
+        });
+
+        document.getElementById('mouseoutPara').addEventListener('mouseout', function() {
+            alert('Mouse Out');
+        });
+
+        document.getElementById('keydownInput').addEventListener('keydown', function(event) {
+            alert('Key Pressed: ' + event.key);
+        });
+
+        document.getElementById('keydownInput').addEventListener('keyup', function(event) {
+            document.getElementById('keyupPara').textContent = 'Key Released: ' + event.key;
+        });
+
+        document.getElementById('changeSelect').addEventListener('change', function(event) {
+            alert('Selected Option: ' + event.target.value);
+        });
+
+        document.getElementById('submitForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Form Submitted!');
+        });
+
+        document.getElementById('focusInput').addEventListener('focus', function() {
+            this.style.backgroundColor = 'lightblue';
+        });
+
+        document.getElementById('blurInput').addEventListener('blur', function() {
+            this.style.backgroundColor = 'white';
+        });
+
+        document.getElementById('loadImage').addEventListener('load', function() {
+            alert('Image Loaded');
+        });
+    </script>
+</body>
+</html>
