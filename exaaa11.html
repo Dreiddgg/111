@@ -52,13 +52,11 @@
 
     <button id="clickBtn">Click Me!</button>
 
+    <button id="dblClickBtn">Double Click Me!</button>
+
     <p id="mouseoverPara">Hover over me!</p>
 
-    <p id="mouseoutPara">Mouse out of me!</p>
-
-    <input type="text" id="keydownInput" placeholder="Press a key">
-
-    <p id="keyupPara"></p>
+    <input type="text" id="blurInput" placeholder="Click and then click outside to blur">
 
     <select id="changeSelect">
         <option value="option1">Option 1</option>
@@ -71,52 +69,67 @@
         <button type="submit">Submit</button>
     </form>
 
-    <input type="text" id="focusInput" placeholder="Click here to focus">
+    <input type="text" id="focusinInput" placeholder="Click here to focus in">
 
-    <input type="text" id="blurInput" placeholder="Click and then click outside to blur">
+    <input type="text" id="focusoutInput" placeholder="Click here to focus out">
 
-    <img id="loadImage" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhki4jfhv4RTSZOOL2Sowcpjvi8ioIkULWpQ&usqp=CAU" alt="Image" width="200">
+    <div id="resizeDiv">Resize me!</div>
+
+    <div id="animationDiv">Animate me!</div>
 
     <script>
-        document.getElementById('clickBtn').addEventListener('click', function() {
-            alert('Button Clicked!');
+        const clickBtn = document.getElementById('clickBtn');
+        clickBtn.addEventListener('click', function() {
+            alert('Click Event Fired!');
         });
 
-        document.getElementById('mouseoverPara').addEventListener('mouseover', function() {
-            alert('Mouse Over');
+        const dblClickBtn = document.getElementById('dblClickBtn');
+        dblClickBtn.addEventListener('dblclick', function() {
+            alert('Double Click Event Fired!');
         });
 
-        document.getElementById('mouseoutPara').addEventListener('mouseout', function() {
-            alert('Mouse Out');
+        const mouseoverPara = document.getElementById('mouseoverPara');
+        mouseoverPara.addEventListener('mouseover', function() {
+            alert('Mouse Over Event Fired!');
         });
 
-        document.getElementById('keydownInput').addEventListener('keydown', function(event) {
-            alert('Key Pressed: ' + event.key);
+        const blurInput = document.getElementById('blurInput');
+        blurInput.addEventListener('blur', function() {
+            alert('Blur Event Fired!');
         });
 
-        document.getElementById('keydownInput').addEventListener('keyup', function(event) {
-            document.getElementById('keyupPara').textContent = 'Key Released: ' + event.key;
+        const changeSelect = document.getElementById('changeSelect');
+        changeSelect.addEventListener('change', function(event) {
+            alert('Change Event Fired! Selected Option: ' + event.target.value);
         });
 
-        document.getElementById('changeSelect').addEventListener('change', function(event) {
-            alert('Selected Option: ' + event.target.value);
-        });
-
-        document.getElementById('submitForm').addEventListener('submit', function(event) {
+        const submitForm = document.getElementById('submitForm');
+        submitForm.addEventListener('submit', function(event) {
             event.preventDefault();
-            alert('Form Submitted!');
+            alert('Submit Event Fired!');
         });
 
-        document.getElementById('focusInput').addEventListener('focus', function() {
-            this.style.backgroundColor = 'lightblue';
+        const focusinInput = document.getElementById('focusinInput');
+        focusinInput.addEventListener('focusin', function() {
+            alert('Focus In Event Fired!');
         });
 
-        document.getElementById('blurInput').addEventListener('blur', function() {
-            this.style.backgroundColor = 'white';
+        const focusoutInput = document.getElementById('focusoutInput');
+        focusoutInput.addEventListener('focusout', function() {
+            alert('Focus Out Event Fired!');
         });
 
-        document.getElementById('loadImage').addEventListener('load', function() {
-            alert('Image Loaded');
+        window.addEventListener('resize', function() {
+            alert('Resize Event Fired!');
+        });
+
+        const animationDiv = document.getElementById('animationDiv');
+        animationDiv.addEventListener('animationstart', function() {
+            alert('Animation Start Event Fired!');
+        });
+
+        animationDiv.addEventListener('animationend', function() {
+            alert('Animation End Event Fired!');
         });
     </script>
 </body>
